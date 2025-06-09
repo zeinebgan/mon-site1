@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>La pénurie de l'eau</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #cce5ff;
+            text-align: center;
+            transform: scale(0.67);
+            transform-origin: top center;
+        }
+        nav {
+            background: #005f9e;
+            padding: 20px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 40px 0 10px;
+        }
+        section {
+            margin: 60px auto;
+            width: 80%;
+            max-width: 1200px;
+            background: rgba(0, 95, 158, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+        }
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        section p {
+            font-size: 20px;
+            text-align: justify;
+            line-height: 1.6;
+            padding: 0 10px;
+        }
+        .comment-section {
+            margin: 80px 0;
+        }
+        textarea {
+            width: 80%;
+            height: 150px;
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 18px;
+            border: 2px solid #005f9e;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            border: none;
+            background: #006bb3;
+            color: white;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .comment-bubble {
+            background-color: #f1f1f1;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 15px auto;
+            width: 60%;
+            font-size: 18px;
+            position: relative;
+            text-align: left;
+            animation: fadeIn 0.5s ease-in;
+        }
+        .comment-bubble::before {
+            content: '💬';
+            position: absolute;
+            left: -30px;
+            top: 10px;
+            font-size: 22px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html"> Accueil </a>
+        <a href="2page.html"> Le patrimoine de l'eau en Tunisie </a>
+        <a href="#pénurie.html"> la pénurie de l'eau </a>
+        <a href="html.html"> S'inscrire </a> <!-- 🔗 lien vers le formulaire -->
+
+    </nav>
+
+
+    <h1>La pénurie de l'eau - un problème international</h1>
+
+    <nav>
+        <a href="#causes">Causes</a>
+        <a href="#pays">Pays touchés</a>
+        <a href="#consequences">Conséquences</a>
+        <a href="#solutions">Solutions</a>
+    </nav>
+
+    <section id="causes">
+        <h2>Les causes de la pénurie de l'eau</h2>
+        <img src="https://fnh.ma//uploads/actualites/644af0f6c4c67_penurie%20eau%20MENA.jpg" alt="Carte de pénurie d'eau">
+        <p>Les causes sont nombreuses : croissance démographique, changement climatique, sécheresses, surconsommation, pollution des ressources, urbanisation excessive, etc. Ces facteurs combinés réduisent la disponibilité de l'eau douce.</p>
+    </section>
+
+    <section id="pays">
+        <h2>Les pays touchés</h2>
+        <img src="https://cdn.statcdn.com/Infographic/images/normal/27079.jpeg" alt="Pays touchés par la pénurie">
+        <p>Des pays comme Bahreïn, le Koweït, le Qatar, Oman ou encore l'Égypte figurent parmi les plus menacés. Leurs climats arides, leurs ressources limitées et la forte demande aggravent la situation.</p>
+    </section>
+
+    <section id="consequences">
+        <h2>Les conséquences de la pénurie</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScZpqo-qV5BAexwDdqYWJ7S3_0p5OWXPnoWw&s" alt="Conséquences de la sécheresse">
+        <p>La pénurie d'eau entraîne des sécheresses, une baisse des productions agricoles, des migrations, des tensions sociales et des risques sanitaires (choléra, typhoïde, manque d'hygiène). C’est une urgence mondiale.</p>
+    </section>
+
+    <section id="solutions">
+        <h2>Les solutions possibles</h2>
+        <img src="https://www.1h2o3.com/wp-content/uploads/2019/03/SDG-6-SDG6-ODD-6-ODD6-Assainissement-et-eau-potable-1h2o3.png" alt="Solutions pour l'eau potable">
+        <p>Des gestes simples comme limiter les gaspillages, collecter l’eau de pluie ou réutiliser les eaux usées peuvent faire la différence. À grande échelle : dessalement, éducation, irrigation intelligente et lois protectrices sont essentielles.</p>
+    </section>
+
+    <div class="comment-section">
+        <h2>Votre avis</h2>
+        <textarea placeholder="Laissez votre commentaire..."></textarea><br>
+        <button onclick="submitComment()">Envoyer</button>
+        <div id="comments-list"></div>
+    </div>
+
+    <script>
+        function submitComment() {
+            const textarea = document.querySelector("textarea");
+            const commentText = textarea.value.trim();
+            if (commentText) {
+                const commentDiv = document.createElement("div");
+                commentDiv.className = "comment-bubble";
+                commentDiv.textContent = commentText;
+                document.getElementById("comments-list").appendChild(commentDiv);
+                textarea.value = "";
+            } else {
+                alert("Veuillez entrer un commentaire.");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title> Patrimoine de l'eau en Tunisie </title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #c5e2fc;
+      text-align: center;
+    }
+
+    nav {
+      background: #74a5fb;
+      padding: 20px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #003366;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 40px 0 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    section.patrimoine-section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .content-block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 30px;
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .content-block img {
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;
+      flex-shrink: 0;
+    }
+
+    .définition h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .définition p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .comment-section {
+      background: #ffffffcc;
+      padding: 60px 20px;
+      margin-top: 80px;
+    }
+
+    textarea {
+      width: 80%;
+      height: 150px;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      border: none;
+      background: #1e98e9;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #156ec3;
+    }
+
+    @media (max-width: 768px) {
+      .content-block {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .content-block img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation principale -->
+<nav>
+        <a href="index.html"> Accueil </a>
+        <a href="#2page.html"> Le patrimoine de l'eau en Tunisie </a>
+        <a href="pénurie.html"> la pénurie de l'eau </a>
+        <a href="html.html"> S'inscrire </a> <!-- 🔗 lien vers le formulaire -->
+
+    </nav>
+
+
+  <h1>Patrimoine de l'eau en Tunisie</h1>
+
+  <!-- Navigation interne -->
+  <nav>
+    <a href="#patrimoine1">Zaghouan</a>
+    <a href="#patrimoine2">Tozeur</a>
+    <a href="#patrimoine3">Chott el Jerid</a>
+  </nav>
+
+  <!-- Sections patrimoine -->
+  <section id="patrimoine1" class="patrimoine-section">
+    <h2>L’aqueduc et le Temple de l’eau de Zaghouan</h2>
+    <div class="content-block">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShs-k-jWi78jKLRpQxtRU-5gQDAz3wHapIeQ&s" alt="Aqueduc Zaghouan">
+      <div class="définition">
+        <h3>Son histoire</h3>
+        <p>
+          Le réseau de canalisations d'eau de Zaghouan et le Temple des Eaux sont des témoignages remarquables de l'ingénierie hydraulique romaine. Situé sur le flanc du Djebel Zaghouan, le temple a été édifié au IIᵉ siècle sous Hadrien. Construit avec des pierres locales et du marbre, il était dédié à Neptune, dieu des eaux vives. Son architecture rappelle celle des théâtres romains.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="patrimoine2" class="patrimoine-section">
+    <h2>Oasis de Tozeur</h2>
+    <div class="content-block">
+      <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/91/ae/e4.jpg" alt="Oasis Tozeur">
+      <div class="définition">
+        <h3>Qu'est-ce que l'oasis de Tozeur ?</h3>
+        <p>
+          L’oasis de Chebika est un joyau situé au cœur du désert. L’eau y est partagée selon des règles traditionnelles strictes. Grâce à ses systèmes d’irrigation, puits et réservoirs, elle a permis la croissance de plus de 40 000 palmiers, créant une palmeraie exceptionnelle et durable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="patrimoine3" class="patrimoine-section">
+    <h2>Chott el Jerid</h2>
+    <div class="content-block">
+      <img src="https://images.rove.me/w_1920,q_85/glaurqebpsposxzwlnrz/tunisia-chott-el-jerid.jpg" alt="Chott el Jerid">
+      <div class="définition">
+        <h3>Un site naturel impressionnant</h3>
+        <p>
+          Chott el Jerid, situé entre Tozeur et Kébili, est une vaste dépression salée. Autrefois lac, il est aujourd’hui presque asséché. Son potentiel économique est important (ressources naturelles), mais c’est surtout un trésor géologique et hydrologique pour la Tunisie, témoignant de milliers d’années d’histoire naturelle.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section commentaire -->
+  <div class="comment-section">
+    <h2>Votre avis :</h2>
+    <textarea placeholder="Laissez votre commentaire..."></textarea>
+    <br>
+    <button onclick="submitComment()">Envoyer</button>
+  </div>
+
+  <script>
+    function submitComment() {
+      alert("Votre commentaire a été soumis ! Merci pour votre avis.");
+    }
+  </script>
+</body>
+</html>
